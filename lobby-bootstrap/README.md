@@ -21,16 +21,16 @@ will require:
 
 ## As a casino merchant
 
-As a casino merchant, this template will give you an idea on how to build a casino brand and offer games to your customers from our network.
+As a casino merchant, this template will explain how to build a casino brand and offer games to your customers from our network.
 Each game comes with its own unique set of requirements, however, in general, you will require:
 * A merchant account on our [sandbox](https://sandbox.gamblingtec.com)
-* A [game uuid](https://github.com/sunsevennv/gamblingtec-code-samples/tree/master/games) (for each game you wish to offer and instructions on how to launch them)
+* A [game uuid](../gamblingtec-code-samples/tree/master/games) (for each game you wish to offer and instructions on how to launch them)
 * A good web designer and programmer to put it all together for you (if you wish to hire us, [get in touch](https://support.curacaowebhosting.com/submitticket.php))
 
 ## Download and Installation
 
 To begin using this template:
-* [Fork, Clone, or Download on GitHub](https://github.com/sunsevennv/gamblingtec-code-samples/tree/master/lobby-bootstrap)
+* [Fork, Clone, or Download on GitHub](../tree/master/lobby-bootstrap)
 
 ## Usage
 
@@ -59,7 +59,7 @@ as registrations, deposits and transactions.
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/sunsevennv/gamblingtec-code-samples/issues)
+Have a bug or an issue with this template? [Open a new issue](../gtec-merchant-code-sample/issues)
 here on GitHub.
 
 Found a spelling mistake, grammar error or a better way to explain something? You are welcome to fork this repo, make the update, and offer a pull request.
