@@ -5,4 +5,4 @@
 * [Bare Bones integration](/lobby-barebones) (not supported)
 
 ### Looking for data on our games?
-* [Game Data](gtec-merchant-code-sample/tree/master/games)
+* [Game Data](/gtec-merchant-code-sample/tree/master/games)
