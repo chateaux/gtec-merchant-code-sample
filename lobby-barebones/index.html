@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Widget Interaction Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Widget Interaction Example</h1>
+<div><a id="login" href="#">Login / Register</a></div>
+<div><iframe id="myIframe" width="900" height="500" src="" style="display:none;"></iframe></div>
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>REAL</th>
+            <th>FUN</th>
+        </tr>
+        <tr>
+            <td><img alt="Arabian Tale" src="https://wbgdev.ngmcasino.com/wbg_lobby/assets/images/games/game2-2.png"></td>
+            <td><a href="#" onclick="launch(0, 37)">Play Real</a></td>
+            <td><a href="#" onclick="launch(1, 37)">Play FUN</a></td>
+        </tr>
+        <tr>
+            <td><img alt="Halloween Fortune" src="https://wbgdev.ngmcasino.com/wbg_lobby/assets/images/games/game39-2.png"></td>
+            <td><a href="#" onclick="launch(0, 92)">Play Real</a></td>
+            <td><a href="#" onclick="launch(1, 92)">Play FUN</a></td>
+        </tr>
+        <tr>
+            <td><img alt="Lord of the Ocean" src="https://wbgdev.ngmcasino.com/wbg_lobby/assets/images/games/game14-2.png"></td>
+            <td><a href="#" onclick="launch(0, 121)">Play Real</a></td>
+            <td><a href="#" onclick="launch(1, 121)">Play FUN</a></td>
+        </tr>
+    </table>
+</div>
+<div><iframe id="gameFrame" width="900" height="900" src="" style="display:none;"></iframe></div>
+<script src="https://sandbox.gamblingtec.com/assets/js/jschannel.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    var baseUrl = 'https://sandbox.gamblingtec.com/';
+    var merchantCode = '889db1d1-7dc0-43c7-825f-d50a7a504619';
+    var gameCode = '884d6dfc-9933-45fe-af64-d8bc8b7e5f43';
+    var widgetUrl = baseUrl + 'widget/login?referrer=' + merchantCode;
+    var thirdpartyUrl = baseUrl + '3rdparty.start.html';
+    var loggedIn = false;
+    var balance = 0;
+    var canthirdparty = true;
+    var hideLoginForm = false;
+    var widgetChannel;
+    var logoutWidgetChannel;
+
+    function launch(fun, id) {
+        var url = 'https://wbgdev.ngmcasino.com/wbg_server/index.php?r=gamblingtec/start-game&game_id=' + id + '&demo=' + fun;
+        if (fun == 0) {
+            url = baseUrl + 'widget/launch/' + gameCode + '?type=deposit&return=' + encodeURIComponent(url);
+        }
+        $('#gameFrame').attr('src', url);
+        $('#gameFrame').show();
+    }
+
+    $(function(){
+        $('#myIframe').attr('src', widgetUrl);
+        $('#thirdpartyFrame').attr('src', thirdpartyUrl);
+    });
+
+    $('#login').click(function() {
+        if (loggedIn) {
+            $('#myIframe').toggle();
+        } else {
+            console.log(canthirdparty);
+            if (canthirdparty) {
+                hideLoginForm = false;
+                $('#myIframe').show();
+            } else {
+                $('#myIframe').hide();
+                hideLoginForm = true;
+                var popup = window.open(widgetUrl, '_blank', 'height=500,width=900');
+                setupLoginWindowChannel(popup);
+            }
+        }
+    });
+
+    function receiveMessage(event) {
+        console.log(event.data);
+        if (event.data && event.data.type && event.data.type=="3rdparty") {
+            canthirdparty = event.data.value;
+            console.log(canthirdparty);
+        }
+    }
+    window.addEventListener("message", receiveMessage, false);
+
+    $('#myIframe').on('load', function() {
+        console.log("widget onload");
+        setupWidgetChannel();
+        setupLogoutWidgetChannel();
+    });
+
+    function setupWidgetChannel() {
+        widgetChannel = Channel.build({
+            window: $('#myIframe')[0].contentWindow,
+            origin: "*",
+            scope: "widget",
+            onReady: function () {
+                console.log("widget comms ready: client");
+            }
+        });
+        widgetChannel.bind("balance", function (context, params) {
+            balance = params;
+        });
+        widgetChannel.bind("login", function (context, params) {
+            console.log("login received");
+            login();
+            /*
+             if (that.loginService.fulfill) {
+             that.loginService.fulfill();
+             }
+             */
+            /*
+             // we send user uuid as parameter, can be used for google analytics userID tracking
+
+             ga('set', 'userId', params.user);
+             ga('send', 'event','widget', 'login');
+             */
+        });
+    }
+
+    function setupLogoutWidgetChannel() {
+        logoutWidgetChannel = Channel.build({
+            window: $('#myIframe')[0].contentWindow,
+            origin: "*",
+            scope: "widget-logout",
+            onReady: function () {
+                console.log("logout widget comms ready: client");
+            }
+        });
+        logoutWidgetChannel.bind("logout", function (context, params) {
+            console.log("logout channel ready");
+            logout();
+        });
+    }
+
+    function setupLoginWindowChannel(popup) {
+        loginWindowChannel = Channel.build({
+            window: popup,
+            origin: "*",
+            scope: "loginwindow",
+            onReady: function () {
+                console.log("login window comms ready: client");
+            }
+        });
+        loginWindowChannel.bind("windowlogin", function (context, params) {
+            console.log("got external login");
+            //external login event
+            canthirdparty = true;
+            login();
+            $('#myIframe').attr('src', widgetUrl);
+            console.log("External login complete");
+        });
+    }
+
+    function login() {
+        console.log('now logged in');
+        loggedIn = true;
+        $('#login').html('My Account');
+    }
+
+    function logout() {
+        console.log('now logged out');
+        loggedIn = false;
+        $('#login').html('Login / Register');
+    }
+</script>
+<iframe style="display:none;" src="" id="thirdpartyFrame"></iframe>
+</body>
+</html>

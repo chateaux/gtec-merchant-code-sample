@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>GamblingTec sample login and game launch widget</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/creative.css" rel="stylesheet">
+    <!-- Use this to hide the modal necessary for loading and closing the modal-->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">GamblingTec.com</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Getting started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="loginregister" href="#">Login & Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="masthead">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1 id="homeHeading">GamblingTec sample login and game launch site</h1>
+          <hr>
+          <p>
+            This single page skin explains how to use the GamblingTec.com login widget, how to launch games
+            and how to access basic data from the widget to be used in your game skin.<br/>
+            Logged in users UUID: <span class="highlite" id="useruuid"></span><br/>
+            Logged in users Balance: <span class="highlite" id="balance">€-</span>
+          </p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+      </div>
+    </header>
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">NOTES:</h2>
+            <hr class="light">
+            <p class="text-faded">
+              1. Try out the login/register link at the top. This will open our login/register widget on GamblingTec.com and
+              once logged in, will communicate back with this template allowing it to update the login/register text to 'my account',
+              and display the users uuid/balance.
+            </p>
+            <p class="text-faded">
+              2. Next play a game for real or for fun. If you are not logged in, you will be asked to do so, otherwise the game will
+              be launched. If you play for real you will be asked to make a deposit and will be directed to the deposit pages.
+            </p>
+            <p class="text-faded">
+              You will notice the name of the game you are about to play in the deposit pages when playing for real. This is
+              controlled by the game code. At present it will be set to GamblingTec.com and will change once your code has been
+              added.
+            </p>
+            <a class="btn btn-default btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">To get started</h2>
+            <hr class="primary">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-connectdevelop text-primary sr-icons"></i>
+              <h3>Sandbox account</h3>
+              <p class="text-muted">Setup your account on our <a href="https://sandbox.gamblingtec.com" target="_blank">SandBox environment</a>.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-book text-primary sr-icons"></i>
+              <h3>API Docs</h3>
+              <p class="text-muted">Make sure you have our <a href="https://docs.google.com/document/d/1_I-ffgrsLPocDhrwDLr6QI3XlmILbG0M8ntx1Mecbdw/edit?usp=sharing" target="_blank">latest API documentation</a>.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-cloud-download text-primary sr-icons"></i>
+              <h3>Download samples</h3>
+              <p class="text-muted">Check GitHub for <a href="https://github.com/sunsevennv/gamblingtec-code-samples" target="_blank">code samples & free templates</a>.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-telegram text-primary sr-icons"></i>
+              <h3>Get in touch</h3>
+              <p class="text-muted">Need some help? Contact us via our <a href="https://gtec.curacaowebhosting.com/submitticket.php" target="_blank">support desk</a>!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="p-0" id="portfolio">
+      <div class="row">
+        <div class="container">
+          <p>
+              The following are games integrated into our system by SGS Universal. Have a look at the code and note the simple
+            manner in which they are launched.
+          </p>
+          <p>
+            Please note that the REAL play option will direct you to the payment pages. To continue from these pages just
+            click on the "transfer" button with a zero balance. You will be directed to a game that is set in FUN mode. The
+            purpose of this is to illustrate how our transfer/payment system works.
+          </p>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="game-card thumb">
+                <img src="img/games/game-02.jpg">
+                <div class="thumb-overlay">
+                  <h3>The Mummy</h3>
+                  <div>
+                    <a class="btn btn-primary" onclick="launch('REAL', 'slmu')" href="#">Real play</a>
+                    <a class="btn btn-secondary" onclick="launch('FUN', 'slmu')" href="#">Fun Play</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="game-card thumb">
+                <img src="img/games/blackjack1.jpg">
+                <div class="thumb-overlay">
+                  <h3>Blackjack</h3>
+                  <div>
+                    <a class="btn btn-primary" onclick="launch('REAL', 'bjbj')" href="#">Real play</a>
+                    <a class="btn btn-secondary" onclick="launch('FUN', 'bjbj')" href="#">Fun Play</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="game-card thumb">
+                <img src="img/games/roulette2.jpg">
+                <div class="thumb-overlay">
+                  <h3>Roulette</h3>
+                  <div>
+                    <a class="btn btn-primary" onclick="launch('REAL', 'rowz')" href="#">Real play</a>
+                    <a class="btn btn-secondary" onclick="launch('FUN', 'rowz')" href="#">Fun Play</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="call-to-action bg-dark">
+      <div class="container text-center">
+        <h2>This template built using bootstrap</h2>
+        <a class="btn btn-default btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+      </div>
+    </div>
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Ready to launch your business?!</h2>
+            <hr class="primary">
+            <p>
+              Once your project is ready, get in touch and we will create live credentials for you!
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x sr-contact"></i>
+            <p>+44 0208 144 7266</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+            <p>
+              <a href="https://support.gamblingtec.com" target="_blank">https://support.gamblingtec.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container"  style="width:100%">
+      <!-- Modal -->
+      <div class="modal fade" id="myAccountModal" role="dialog"  style="width:100%">
+        <div class="modal-dialog"  style="width:100%">
+          <!-- Modal content-->
+          <div class="modal-content"  style="width:100%">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" style="width:100%">
+              <iframe
+                      frameborder="10"
+                      width="100%"
+                      height="100%"
+                      id="widgetFrame"
+                      src=""
+              >Loading...</iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container"  style="width:100%">
+      <!-- Modal -->
+      <div class="modal fade" id="gameModal" role="dialog"  style="width:100%">
+        <div class="modal-dialog"  style="width:100%">
+          <!-- Modal content-->
+          <div class="modal-content"  style="width:100%">
+            <div class="modal-header">
+              <a class="close" data-dismiss="modal" onclick="closeGame()" href="#">&times;</a>
+            </div>
+            <div class="modal-body" style="width:100%">
+              <iframe
+                      frameborder="10"
+                      width="100%"
+                      height="100%"
+                      id="gameFrame"
+                      src=""
+              >Loading...</iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://sandbox.gamblingtec.com/assets/js/jschannel.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script>
+      var baseUrl = 'https://sandbox.gamblingtec.com/';
+      var merchantCode = '3699d089-eafa-405c-84eb-91c4582d017a'; //You will be provided with a merchant code (this code refers to the GamblingTec test merchant)
+      var gameCode = '884d6dfc-9933-45fe-af64-d8bc8b7e5f43'; //You will be provided with your game code (this code refers to NGM casino games)
+      var widgetUrl = baseUrl + 'widget/login?referrer=' + merchantCode;
+      var thirdpartyUrl = baseUrl + '3rdparty.start.html';
+      var loggedIn = false;
+      var balance = 0;
+      var canthirdparty = true;
+      var hideLoginForm = false;
+      var widgetChannel;
+      var logoutWidgetChannel;
+      var userUuid = "N/A";
+
+      function launch(gameType, gameId) {
+        //We are launching a game by SGS Universal. NOTE we have forced the variable FUN (as apposed to using gameType) the reason for
+        //this is that SGS is a real live game and it is not possible to play it from the sandbox as a REAL game. If you do click on
+        //REAL play type in the skin, it will re-direct you to the test payment page where you must click the transfer button
+        //to continue, this will simply launch the FUN game type. The purpose of this is to illistrate the payment process for
+        //REAL live plays.
+        var url = 'https://sgs.gamblingtec.com/wrapper/launch/' + gameId + '/FUN';
+        //If game type were set to REAL we would first need to direct the player to the deposit page before returning to the game
+        //If you were a merchnt, you would require the game code of each game you wish offer
+        if (gameType == 'REAL') {
+          //this will re-direct to the payment page and then back to the FUN play mode.
+          url = baseUrl + 'widget/launch/' + gameCode + '?type=deposit&return=' + encodeURIComponent(url);
+        }
+        //Add the URL to the iframe
+        $('#gameFrame').attr('src', url);
+        //And show the modal
+        $('#gameModal').modal('show');
+      }
+      //When a game is closed we must re-set the iframe src otherwise the game will persist in the background
+      //Symptoms of this would be the game music playing even though the frame is closed
+      function closeGame() {
+        $('#gameFrame').attr('src', 'about:blank');
+      }
+      //We add the widget url to the frame
+      //The purpose of third party frame is to check whether or not third party cookies are accepted or not. If not we serve the
+      //login widget in a pop up window otherwise it is server in an iframe.
+      $(function(){
+        $('#widgetFrame').attr('src', widgetUrl);
+        $('#thirdpartyFrame').attr('src', thirdpartyUrl);
+      });
+
+      //When user clicks the login/register button we either show an iframe or if third prty cookies are not accepted,
+      // then we open a pop up
+      $('#loginregister').click(function() {
+        $('#myAccountModal').modal('show');
+        if (!loggedIn) {
+          console.log(canthirdparty);
+          if (canthirdparty) {
+            hideLoginForm = false;
+          } else {
+            hideLoginForm = true;
+            var popup = window.open(widgetUrl, '_blank', 'height=500,width=900');
+            setupLoginWindowChannel(popup);
+          }
+        }
+      });
+
+      //Here we listen to message events and specifically for 'canthirdparty'
+      //You can use this to grab any event data in order to display on your game skin
+      function receiveMessage(event) {
+        console.log(event.data);
+        if (event.data && event.data.type && event.data.type=="3rdparty") {
+          canthirdparty = event.data.value;
+          console.log(canthirdparty);
+        }
+      }
+      window.addEventListener("message", receiveMessage, false);
+
+      $('#widgetFrame').load(function() {
+        console.log("widget onload");
+        setupWidgetChannel();
+        setupLogoutWidgetChannel();
+      });
+
+      function setupWidgetChannel() {
+        widgetChannel = Channel.build({
+          window: $('#widgetFrame')[0].contentWindow,
+          origin: "*",
+          scope: "widget",
+          onReady: function () {
+            console.log("widget comms ready: client");
+          }
+        });
+        widgetChannel.bind("balance", function (context, params) {
+          balance = params;
+          console.log('Balance retrieved from GamblingTec to be used in Skin:: ', balance);
+          $('#balance').html('€' + balance);
+        });
+        widgetChannel.bind("login", function (context, params) {
+          console.log("login received", params.user);
+          useruuid = params.user;
+          $('#useruuid').html(params.user);
+          login();
+        });
+
+      }
+
+      function setupLogoutWidgetChannel() {
+        logoutWidgetChannel = Channel.build({
+          window: $('#widgetFrame')[0].contentWindow,
+          origin: "*",
+          scope: "widget-logout",
+          onReady: function () {
+            console.log("logout widget comms ready: client");
+          }
+        });
+        logoutWidgetChannel.bind("logout", function (context, params) {
+          console.log("logout channel ready");
+          logout();
+        });
+      }
+
+      //Used in the event third party cookies are unavailable
+      function setupLoginWindowChannel(popup) {
+        loginWindowChannel = Channel.build({
+          window: popup,
+          origin: "*",
+          scope: "loginwindow",
+          onReady: function () {
+            console.log("login window comms ready: client");
+          }
+        });
+        loginWindowChannel.bind("windowlogin", function (context, params) {
+          console.log("got external login");
+          //external login event
+          canthirdparty = true;
+          login();
+          $('#widgetFrame').attr('src', widgetUrl);
+          console.log("External login complete");
+        });
+      }
+      function login() {
+        console.log('now logged in');
+        loggedIn = true;
+        $('#loginregister').html('My Account');
+      }
+
+      function logout() {
+        console.log('now logged out');
+        loggedIn = false;
+        $('#loginregister').html('Login & Register Example');
+      }
+    </script>
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+    <iframe style="display:none;" src="" id="thirdpartyFrame"></iframe>
+  </body>
+</html>

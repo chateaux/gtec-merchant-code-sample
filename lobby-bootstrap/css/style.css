@@ -1,0 +1,164 @@
+body.modal-open {
+  overflow: hidden;
+  position:fixed;
+  width: 100%;
+}
+
+#myAccountModal .modal {
+  border-radius: 0;
+}
+
+/** Controls the external modal height and width **/
+#myAccountModal .modal-dialog {
+  width:100%;
+  height:100%;
+  top:-30px;
+  position: fixed;
+  max-width: 100%;
+}
+
+/** Controls the screen height **/
+#myAccountModal .modal-content {
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/** Controls the internal modal height and width **/
+#myAccountModal .modal-body {
+  height: 100%;
+  width:100%;
+  padding:0;
+}
+
+#gameModal .modal {
+  border-radius: 0;
+}
+
+/** Controls the external modal height and width **/
+#gameModal .modal-dialog {
+  width:100%;
+  height:100%;
+  top:-30px;
+  position: fixed;
+  max-width: 100%;
+}
+
+/** Controls the screen height **/
+#gameModal .modal-content {
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/** Controls the internal modal height and width **/
+#gameModal .modal-body {
+  height: 100%;
+  width:100%;
+  padding:0;
+}
+
+
+/* .modal-fullscreen */
+
+.modal-fullscreen {
+  background: darkgrey;
+}
+.modal-fullscreen .modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.modal-backdrop.modal-backdrop-fullscreen {
+  background: #ffffff;
+}
+.modal-backdrop.modal-backdrop-fullscreen.in {
+  opacity: .97;
+  filter: alpha(opacity=97);
+}
+
+/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
+
+.modal-fullscreen .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .modal-fullscreen .modal-dialog {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-fullscreen .modal-dialog {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-fullscreen .modal-dialog {
+    width: 1170px;
+  }
+}
+
+/* ------ game card thumb----------- */
+.game-card.thumb {
+  position: relative;
+  border: 10px solid #fff;
+  -webkit-box-shadow: 0 0 1px 1px #cccccc;
+  -moz-box-shadow: 0 0 1px 1px #cccccc;
+  -ms-box-shadow: 0 0 1px 1px #cccccc;
+  -o-box-shadow: 0 0 1px 1px #cccccc;
+  box-shadow: 0 0 1px 1px #cccccc;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 0 30px;
+  max-width: none; }
+.game-card.thumb img {
+  width: 100%;
+  position: relative; }
+.game-card.thumb .thumb-overlay {
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700; }
+.game-card.thumb .thumb-overlay h3 {
+  color: #fff;
+  font-size: 16px;
+  padding: 50px 0  30px; }
+.game-card.thumb .thumb-overlay .btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: 700; }
+.game-card.thumb:hover .thumb-overlay {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
+
